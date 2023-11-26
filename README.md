@@ -4,7 +4,7 @@ Current mods:
 
 2.0 Bobmod
 
-CelLua randomiser
+CelLua randomiser (is special,using multiloader wont work as much)
 
 Solitaire button
 
