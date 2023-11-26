@@ -16,5 +16,7 @@ Solitaire button
 2. dowload the lua file of the mod then move it in the folder:
 
 for Windows XP, Vista & Windows 7-11 is at %appdata%\LOVE\CelLua Machine\Scripts
+
 for Mac its /Users/<your username>/Library/Application Support/LOVE/CelLua Machine/Scripts
+
 for Linux	its ~/.local/share/love/CelLua Machine/Scripts
