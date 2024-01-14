@@ -286,7 +286,60 @@ BobCells = {
 				   end,
 		subtick = 69
 	},
+	{
+		name="Gob",
+		desc = "Does Gob things",
+		id = "gob",
+		b64tex = [[iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAXUlEQVQ4T2NkgILjl/P/w9jE0Ja6ExlB6sAESLOl7kRi9MHVHL+czwAyhJEczUiuZsAw4P///wyMjGCHYQB0OZArBqEBpIQkVi8McQNA0UQMgEXzcAkDijMTpdkZAAXEc3GLImFWAAAAAElFTkSuQmCC]],
+		code = 	function(x,y,c)
+					PushCell(x,y,math.random(0,3),{force=1})
+					c.updated = true
+					if math.random(1, 10000) == 1 then
+						for cx=1,width-2 do
+							for cy=1,height-2 do
+								if cx ~= x or cy ~= y then
+									table.safeinsert(c,"eatencells",GetCell(cx,cy))
+									SetCell(cx,cy,getempty())
+								end
+							end
+						end
+						Play("destroy")
+						for i=1,200 do
+							for i=1,359,9 do
+								local p = {}
+								p.life = math.random(5,25)
+								p.x = x
+								p.y = y
+								p.vx = math.cos(math.rad(i))*(i%18 < 9 and .15 or .08)*math.random(2,20)
+								p.vy = math.sin(math.rad(i))*(i%18 < 9 and .15 or .08)*math.random(2,20)
+								local hue = math.random()*math.pi*2
+								p.color = {(math.sin(hue))+0.5,(math.sin(hue+math.pi*2/3))+0.5,(math.sin(hue+math.pi*4/3))+0.5,1}
+								table.insert(fireworkparticles,p)
+							end
+						end
+					end
+				end,
+		subtick = 69
+		},
 }
+
+local currentDate = os.date("*t")
+if currentDate.month == 1 and currentDate.day == 22 then
+	getsplash = function() 
+		return "HAPPY BIRTHDAY BOBMOD! BOBMOD IS NOW " .. currentDate.year - 2023 .. " YEARS OLD !"
+	end
+	Resplash()
+	if GetSaved("secrets")['party'] then
+		settings.party = true
+	else
+		HandleSecret('party')
+		settings.party = true
+	end
+	BobCells[1].b64tex = [[iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAYElEQVQ4T82TwQoAIAhD5/9/tKEQWUas8JCHEJxPWyQYoSFnUjGRHwBum/sAMcBrs0MSQFUhzs2xq30IYOyPmnoTnzc4ub9Co3a6ghWYiM/8kQfM6jtNyWfqYM7BsYYPbyslKwW/sLNWAAAAAElFTkSuQmCC]]
+	BobCells[1].name = "Happy Bob"
+	BobCells[1].desc = "Bob is happy,its his birthday and he is now " .. currentDate.year - 2023 .. " Years old,and still,he will Do Bob things as usual,but this time,he'll do Bob things,but with a smile"
+end
+
 --makes cell real
 for _, cell in ipairs(BobCells) do
 	love.filesystem.write("textures/BobMod/" .. cell.id .. ".png", love.data.decode("string", "base64", cell.b64tex))
