@@ -1,8 +1,0 @@
-{
-  "icon":"file:icon.png",
-  "disabled":true,
-  "name":"BobMod",
-  "api":["any"],
-  "desc":"add cel",
-  "version":"v1.5.0"
-}
