@@ -2,7 +2,7 @@ local cells = {
     {
         name="Bob",
         desc = "Does Bob things",
-        id = "bob",
+        id = "Bob",
         code = 	function(x,y,c)
                     CustomBob(x,y,c, {0,1,2,3}, "push")
                     c.updated = true
@@ -12,7 +12,7 @@ local cells = {
     {
         name="Slide Bob",
         desc = "Does Bob things but sliding",
-        id = "slidebob",
+        id = "Slidebob",
         code = 	function(x,y,c)
             if c.rot == 0 or c.rot == 2 then
                 CustomBob(x,y,c, {0,2}, "push")
@@ -26,7 +26,7 @@ local cells = {
     {
         name="Two-Directionnal Bob",
         desc = "Does Bob things but is two-directionnal",
-        id = "twodirbob",
+        id = "Twodirbob",
         code = 	function(x,y,c)
             if c.rot == 0 then
                 CustomBob(x,y,c, {0,3}, "push")
@@ -44,7 +44,7 @@ local cells = {
     {
         name="Three-Directionnal Bob",
         desc = "Does Bob things but is three-directionnal",
-        id = "threedirbob",
+        id = "Threedirbob",
         code = 	function(x,y,c)
             if c.rot == 0 then
                 CustomBob(x,y,c, {0,1,3}, "push")
@@ -63,7 +63,7 @@ local cells = {
     {
         name="Repulsor Bob",
         desc = "Does Bob things, but repulse",
-        id = "repulsorbob",
+        id = "Repulsorbob",
         code = 	function(x,y,c)
                     CustomBob(x,y,c, {0,1,2,3}, "repulse")
                     c.updated = true
@@ -74,7 +74,7 @@ local cells = {
     {
         name="Semi repulsor Bob",
         desc = "Does Bob things, but semi repulse",
-        id = "semirepulsorbob",
+        id = "Semirepulsorbob",
         code = 	function(x,y,c)
             if c.rot == 0 or c.rot == 2 then
                 CustomBob(x,y,c, {0,2}, "repulse")
@@ -89,7 +89,7 @@ local cells = {
     {
         name="Hemi repulsor Bob",
         desc = "Does Bob things, but hemi repulse",
-        id = "hemirepulsorbob",
+        id = "Hemirepulsorbob",
         code = 	function(x,y,c)
             if c.rot == 0 then
                 CustomBob(x,y,c, {0,3}, "repulse")
@@ -108,7 +108,7 @@ local cells = {
     {
         name="Hena repulsor Bob",
         desc = "Does Bob things, but hena repulse",
-        id = "henarepulsorbob",
+        id = "Henarepulsorbob",
         code = 	function(x,y,c)
             if c.rot == 0 then
                 CustomBob(x,y,c, {0,1,3}, "repulse")
@@ -127,7 +127,7 @@ local cells = {
     {
         name="SmarterBob",
         desc = "Does Bob things but smarter",
-        id = "smarterbob",
+        id = "Smarterbob",
         code = function(x,y,c)
             if not PushCell(x,y,math.random(0,3),{force=1}) then
                 for k,v in pairs(GetNeighbors(x,y)) do
@@ -141,7 +141,7 @@ local cells = {
     {
         name="Bit Smarter Bob",
         desc = "Does Bob things but a bit smarter",
-        id = "bitsmarterbob",
+        id = "Bitsmarterbob",
         code = function(x,y,c)
             c.updated=true
             local dirs = {0,1,2,3} 
@@ -156,7 +156,7 @@ local cells = {
     {
         name="Paltformer Bob",
         desc = "Does Bob things but obeys gravity",
-        id = "platbob",
+        id = "Platbob",
         code = function(x,y,c)
             SimulatePlatformerplayer(x,y,c,VertVal[math.random(1,2)],HoriVal[math.random(1,2)])
             c.updated = true
@@ -167,7 +167,7 @@ local cells = {
     {
         name="Speedy Bob",
         desc = "Does Bob things, but faster",
-        id = "speedybob",
+        id = "Speedybob",
         code = function(x,y,c)
                     local dir1 = math.random(0,3)
                     PushCell(x,y,dir1,{force=1, nonupdate=true})
@@ -187,11 +187,21 @@ local cells = {
     },
 
     {
-        name="Dia Bob",
+        name="Octo Bob",
         desc = "Does Bob things, but can diagonal",
-        id = "diabob",
+        id = "Octobob",
         code = function(x,y,c)
-            CustomBob(x,y,c, {0, 0.5 , 1 , 1.5 , 2 , 2.5 , 3 , 3.5}, "push")
+            CustomBob(x,y,c, {0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5}, "push")
+            c.updated = true
+        end,
+        subtick = 69
+    },
+    {
+        name="Dia Bob",
+        desc = "Does Bob things, but can only diagonal",
+        id = "Diabob",
+        code = function(x,y,c)
+            CustomBob(x,y,c, {0.5, 1.5, 2.5, 3.5}, "push")
             c.updated = true
         end,
         subtick = 69

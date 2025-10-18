@@ -2,7 +2,7 @@ return {
     {
         name="Baloon Bob",
         desc = "Does Bob things but baloon",
-        id = "baloonbob",
+        id = "Baloonbob",
         code = 	function(x,y,c)
             c.updated = true
             if c.rot == 0 or c.rot == 2 then
@@ -28,7 +28,7 @@ return {
     {
         name="Gob",
         desc = "Does Gob things",
-        id = "gob",
+        id = "Gob",
         code = 	function(x,y,c)
                     c.updated = true
                     if math.random(1, 10000) == 1 then
@@ -63,7 +63,7 @@ return {
     {
         name="Safe Bob",
         desc = "Does Bob things,but safe",
-        id = "safebob",
+        id = "Safebob",
         code = 	function(x,y,c)
             c.updated = true
             local safedir = {}
@@ -72,7 +72,7 @@ return {
                 local k = i
                 local v = temp[k]
                 local c = GetCell(v[1],v[2])
-                if (not IsDestroyer(c,k,x,y,{forcetype="push",lastcell=cell}) or IsUnfriendly(c)) and not IsFriendly(c) then -- Looks for the safe dirs,but will try to kill enemy
+                if (not IsDestroyer(c,k,x,y,{forcetype="push"}) or IsUnfriendly(c)) and not IsFriendly(c) then -- Looks for the safe dirs,but will try to kill enemy
                     table.insert(safedir,k)
                 end
             end

@@ -2,7 +2,7 @@ return{
 	{
 		name="Puller Bob",
 		desc = "Does Bob things but pulls",
-		id = "pullerbob",
+		id = "Pullerbob",
 		code = 	function(x,y,c)
 			CustomBob(x,y,c, {0,1,2,3}, "pull")
 			c.updated = true
@@ -12,7 +12,7 @@ return{
 	{
 		name="Slide Puller Bob",
 		desc = "Does Bob things but pulls and slides",
-		id = "slidepullerbob",
+		id = "Slidepullerbob",
 		code = 	function(x,y,c)
 			if c.rot == 0 or c.rot == 2 then
 				CustomBob(x,y,c, {0,2}, "pull")
@@ -26,7 +26,7 @@ return{
 	{
 		name="Two-Directionnal Puller Bob",
 		desc = "Does Bob things but pulls and is two-directionnal",
-		id = "twodirpullerbob",
+		id = "Twodirpullerbob",
 		code = 	function(x,y,c)
 			if c.rot == 0 then
 				CustomBob(x,y,c, {0,3}, "pull")
@@ -44,7 +44,7 @@ return{
 	{
 		name="Three-Directionnal Puller Bob",
 		desc = "Does Bob things but pulls and is three-directionnal",
-		id = "threedirpullerbob",
+		id = "Threedirpullerbob",
 		code = 	function(x,y,c)
 			if c.rot == 0 then
 				CustomBob(x,y,c, {0,1,3}, "pull")
@@ -63,7 +63,7 @@ return{
 	{
         name="Impulsor Bob",
         desc = "Does Bob things, but impusles",
-        id = "impulsorbob",
+        id = "Impulsorbob",
         code = 	function(x,y,c)
                     CustomBob(x,y,c, {0,1,2,3}, "impulse")
                     c.updated = true
@@ -74,7 +74,7 @@ return{
     {
         name="Semi impulsor Bob",
         desc = "Does Bob things, but semi impulses",
-        id = "semiimpulsorbob",
+        id = "Semiimpulsorbob",
         code = 	function(x,y,c)
             if c.rot == 0 or c.rot == 2 then
                 CustomBob(x,y,c, {0,2}, "impulse")
@@ -89,7 +89,7 @@ return{
     {
         name="Hemi impulsor Bob",
         desc = "Does Bob things, but hemi impulse",
-        id = "hemiimpulsorbob",
+        id = "Hemiimpulsorbob",
         code = 	function(x,y,c)
             if c.rot == 0 then
                 CustomBob(x,y,c, {0,3}, "impulse")
@@ -108,7 +108,7 @@ return{
     {
         name="Hena impulsor Bob",
         desc = "Does Bob things, but hena impulse",
-        id = "henaimpulsorbob",
+        id = "Henaimpulsorbob",
         code = 	function(x,y,c)
             if c.rot == 0 then
                 CustomBob(x,y,c, {0,1,3}, "impulse")

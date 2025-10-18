@@ -2,7 +2,7 @@ return {
     {
     name="Weak Bob",
     desc = "Does Bob things but weaker",
-    id = "weakbob",
+    id = "Weakbob",
     code = 	function(x,y,c)
         CustomBob(x,y,c, {0,1,2,3}, "nudge")
         c.updated = true
@@ -12,7 +12,7 @@ return {
     {
         name="Slide Weak Bob",
         desc = "Does Bob things but sliding and weaker",
-        id = "slideweakbob",
+        id = "Slideweakbob",
         code = 	function(x,y,c)
             if c.rot == 0 or c.rot == 2 then
                 CustomBob(x,y,c, {0,2}, "nudge")
@@ -26,7 +26,7 @@ return {
     {
         name="Two-Directionnal Weak Bob",
         desc = "Does Bob things but weaker and is two-directionnal",
-        id = "twodirweakbob",
+        id = "Twodirweakbob",
         code = 	function(x,y,c)
             if c.rot == 0 then
                 CustomBob(x,y,c, {0,3}, "nudge")
@@ -44,7 +44,7 @@ return {
     {
         name="Three-Directionnal Weak Bob",
         desc = "Does Bob things but weaker and is three-directionnal",
-        id = "threedirweakbob",
+        id = "Threedirweakbob",
         code = 	function(x,y,c)
             if c.rot == 0 then
                 CustomBob(x,y,c, {0,1,3}, "nudge")

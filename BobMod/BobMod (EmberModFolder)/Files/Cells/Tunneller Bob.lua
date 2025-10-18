@@ -2,7 +2,7 @@ return {
     {
         name="Tunneller Bob",
         desc = "Does Bob things but tunnels",
-        id = "tunnellerbob",
+        id = "Tunnellerbob",
         code = 	function(x,y,c)
                 CustomBob(x,y,c, {0,1,2,3}, "tunnel")
                 c.updated = true
@@ -12,7 +12,7 @@ return {
     {
         name="Slide Tunneller Bob",
         desc = "Does Bob things but tunnels and slides",
-        id = "slidetunnellerbob",
+        id = "Slidetunnellerbob",
         code = 	function(x,y,c)
             if c.rot == 0 or c.rot == 2 then
                 CustomBob(x,y,c, {0,2}, "tunnel")
@@ -26,7 +26,7 @@ return {
     {
         name="Two-Directionnal Tunneller Bob",
         desc = "Does Bob things but tunnels and is two-directionnal",
-        id = "twodirtunnellerbob",
+        id = "Twodirtunnellerbob",
         code = 	function(x,y,c)
             if c.rot == 0 then
                 CustomBob(x,y,c, {0,3}, "tunnel")
@@ -44,7 +44,7 @@ return {
     {
         name="Three-Directionnal Tunneller Bob",
         desc = "Does Bob things but tunnels and is three-directionnal",
-        id = "threedirtunnellerbob",
+        id = "Threedirtunnellerbob",
         code = 	function(x,y,c)
             if c.rot == 0 then
                 CustomBob(x,y,c, {0,1,3}, "tunnel")

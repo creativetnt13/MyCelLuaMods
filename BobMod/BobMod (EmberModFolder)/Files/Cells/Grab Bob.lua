@@ -2,7 +2,7 @@ return {
     {
         name="Grabber Bob",
         desc = "Does Bob things but grabs",
-        id = "grabberbob",
+        id = "Grabberbob",
         code = 	function(x,y,c)
             CustomBob(x,y,c, {0,1,2,3}, "grab")
             c.updated = true
@@ -12,7 +12,7 @@ return {
     {
         name="Slide Grabber Bob",
         desc = "Does Bob things but grabs and slides",
-        id = "slidegrabberbob",
+        id = "Slidegrabberbob",
         code = 	function(x,y,c)
             if c.rot == 0 or c.rot == 2 then
                 CustomBob(x,y,c, {0,2}, "grab")
@@ -26,7 +26,7 @@ return {
     {
         name="Two-Directionnal Grabber Bob",
         desc = "Does Bob things but grabs and is two-directionnal",
-        id = "twodirgrabberbob",
+        id = "Twodirgrabberbob",
         code = 	function(x,y,c)
             if c.rot == 0 then
                 CustomBob(x,y,c, {0,3}, "grab")
@@ -44,7 +44,7 @@ return {
     {
         name="Three-Directionnal Grabber Bob",
         desc = "Does Bob things but grabs and is three-directionnal",
-        id = "threedirgrabberbob",
+        id = "Threedirgrabberbob",
         code = 	function(x,y,c)
             if c.rot == 0 then
                 CustomBob(x,y,c, {0,1,3}, "grab")

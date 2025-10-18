@@ -2,7 +2,7 @@ return {
     	{
 		name="Driller Bob",
 		desc = "Does Bob things but drills",
-		id = "drillerbob",
+		id = "Drillerbob",
 		code = 	function(x,y,c)
 				CustomBob(x,y,c, {0,1,2,3}, "drill")
 				c.updated = true
@@ -12,7 +12,7 @@ return {
 	{
 		name="Slide Driller Bob",
 		desc = "Does Bob things but drills and slides",
-		id = "slidedrillerbob",
+		id = "Slidedrillerbob",
 		code = 	function(x,y,c)
 			if c.rot == 0 or c.rot == 2 then
 				CustomBob(x,y,c, {0,2}, "drill")
@@ -26,7 +26,7 @@ return {
 	{
 		name="Two-Directionnal Driller Bob",
 		desc = "Does Bob things but drills and is two-directionnal",
-		id = "twodirdrillerbob",
+		id = "Twodirdrillerbob",
 		code = 	function(x,y,c)
 			if c.rot == 0 then
 				CustomBob(x,y,c, {0,3}, "drill")
@@ -44,7 +44,7 @@ return {
 	{
 		name="Three-Directionnal Driller Bob",
 		desc = "Does Bob things but drills and is three-directionnal",
-		id = "threedirdrillerbob",
+		id = "Threedirdrillerbob",
 		code = 	function(x,y,c)
 			if c.rot == 0 then
 				CustomBob(x,y,c, {0,1,3}, "drill")
