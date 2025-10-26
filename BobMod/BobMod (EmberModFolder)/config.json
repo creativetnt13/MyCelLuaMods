@@ -3,6 +3,6 @@
   "icon":"file:icon.png",
   "name":"BobMod",
   "desc":"add cel",
-  "version":"v1.7.0",
+  "version":"v1.7.5",
   "api":["any"]
 }
